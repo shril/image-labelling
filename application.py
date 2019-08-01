@@ -69,8 +69,10 @@ def run_app(slic, readonly):
         }
     }
 
-    flask_labeller.flask_labeller(app, labelled_images, label_classes, config=config)
+    result = flask_labeller.flask_labeller(app, labelled_images, label_classes, config=config)
+    return result
 
+resp = run_app()
 
-if __name__ == '__main__':
-    run_app()
+if resp is not None:
+    app = resp

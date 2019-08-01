@@ -147,3 +147,5 @@ def flask_labeller(app, labelled_images, label_classes, config=None, use_reloade
     # else:
     #     app.run(debug=debug, use_reloader=use_reloader)
 
+    return socketio
+
